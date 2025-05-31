@@ -18,11 +18,10 @@ headers: {
         'Content-Type': 'application/json', 
       },
 
-body: jsonEncode({
+body: {
   "email": "eve.holt@reqres.in",
   "password": "cityslicka"
-})
-
+}
 
 );
 if(response.statusCode==200){
@@ -32,6 +31,10 @@ if(response.statusCode==200){
 else{
   print(response.statusCode);
 }
+var data= jsonDecode(response.body);
+print(data);
+
+
 }
 catch(e){
 Get.snackbar(e.toString(), 'Network Error');
