@@ -30,7 +30,7 @@ class login extends StatelessWidget {
           children: [
             SizedBox(height: 100),
             TextFormField(
-              controller: logincontroller.namecontroller.value,
+              controller: logincontroller.namecontroller,
               decoration: InputDecoration(
                 hintText: 'Enter your email',
                 border: OutlineInputBorder(
@@ -41,7 +41,7 @@ class login extends StatelessWidget {
             ),
             SizedBox(height: 20),
             TextFormField(
-              controller: logincontroller.passwordcontroller.value,
+              controller: logincontroller.passwordcontroller,
               decoration: InputDecoration(
                 hintText: 'Enter your password',
                 border: OutlineInputBorder(
